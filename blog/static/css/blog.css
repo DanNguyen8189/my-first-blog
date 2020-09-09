@@ -6,7 +6,7 @@ body {
     padding-left: 15px;
 }
 .page-header {
-    background-color: #C25100;
+    background-color: rgb(209, 94, 0);
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -17,9 +17,7 @@ body {
     text-decoration: none;
 }
 
-.content {
-    margin-left: 40px;
-}
+
 
 h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
