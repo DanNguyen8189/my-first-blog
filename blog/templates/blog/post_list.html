@@ -12,6 +12,8 @@
             with name=post_detail 
             pk is for primary key, unique identifier for each post-->
             <p>{{ post.text|linebreaksbr }}</p>
+            <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
         </div>
     {% endfor %}
 {% endblock %}
