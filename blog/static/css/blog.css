@@ -9,6 +9,7 @@ body {
 h1, h2, h3, h4 {
     /*font-family: 'Lobster', cursive;*/
     font-family: 'Mukta', sans-serif;
+    font-weight: 800;
     color: white;
     margin: 0;
 }
@@ -56,6 +57,19 @@ p{
     float: right;
     font-size: 20pt;
     margin-right: 20px;
+}
+.top-button {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    background: orange;
+    color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.top-button:hover {
+    background: rgb(255, 187, 0);
 }
 /*.page-header .right-block a{
     background-color: orange;
