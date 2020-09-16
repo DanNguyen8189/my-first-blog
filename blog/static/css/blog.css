@@ -13,6 +13,9 @@ h1, h2, h3, h4 {
     color: white;
     margin: 0;
 }
+h2 a:hover {
+    color: rgb(0, 132, 255);
+}
 
 h2 a:visited {
     color: white;
@@ -58,18 +61,22 @@ p{
     font-size: 20pt;
     margin-right: 20px;
 }
-.top-button {
+.button-template {
     font-family: 'Mukta', sans-serif;
     font-weight: 500;
     font-size: 18px;
-    background: orange;
-    color: black;
     border-radius: 5px;
     padding: 5px 10px;
+    background: orange;
+    color: black;
 }
 
 .top-button:hover {
     background: rgb(255, 187, 0);
+}
+
+.content {
+    margin-top: 30px;
 }
 /*.page-header .right-block a{
     background-color: orange;
@@ -102,9 +109,13 @@ p{
     font-family: 'Poiret One', cursive;
 }*/
 
-
+.post-author {
+    font-size: 15px;
+    color: #ada6bd;
+}
 .date {
-    color: #828282;
+    font-size: 13px;
+    color: #9c97ac;
 }
 
 .save {
@@ -119,6 +130,7 @@ p{
     max-width: 45em;
     margin: auto;
 }
+
 .post {
     margin-bottom: 10px;
     padding: 20px 50px;
@@ -126,6 +138,20 @@ p{
     border-radius: 5px;
 }
 
+.post-detail h2 {
+    font-size: 60px;
+}
+.post-detail .date{
+    display: inline-block;
+}
+.post-detail .button-template {
+    font-size: 15px;
+    padding: 2px 5px;
+    display: inline-block;
+}
+.post-detail p {
+    margin-top: 50px;
+}
 .comment {
     margin: 20px 0px 20px 20px;
 }
