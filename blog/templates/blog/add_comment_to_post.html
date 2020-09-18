@@ -1,9 +1,12 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+<div class="post-edit-container">
     <h1>New comment</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Send</button>
+        <a class="button-template" href="javascript:history.go(-1)">Cancel</a>
+        <button type="submit" class="save button-template">Send</button>
     </form>
+</div>
 {% endblock %}

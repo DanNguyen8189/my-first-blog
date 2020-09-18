@@ -73,6 +73,7 @@ p{
     padding: 5px 10px;
     background: orange;
     color: black;
+    border: none;
 }
 
 .top-button:hover {
@@ -162,17 +163,31 @@ p{
 
 .login-container {
     background-color: #3a2031;
-    max-width: 45em;
+    max-width: 35em;
     margin: auto;
     border-radius: 5px;
-    padding: 20px;
+    padding: 40px;
 }
-th, td {
-    padding: 15px;
-    text-align: left;
+.login-container p{
+    margin-bottom: 10px;
 }
-td {
-    vertical-align: center;
+.login-container #login-button{
+    display: block;
+    border: none;
+    margin-left: auto;
+}
+
+.post-edit-container {
+    margin: auto;
+    max-width: 45em;
+}
+.post-edit-container a {
+    float: right;
+    margin-top: 20px;
+}
+.post-edit-container button {
+    margin-top: 20px;
+    margin-right: 10px;
 }
 
 @media only screen and (max-width: 768px) {

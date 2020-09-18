@@ -10,20 +10,22 @@
     {% endif %}
         <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
-            <table>
+            <!--<table>
             <tr>
                 <td><p>{{ form.username.label_tag }}</p></td>
-                <!--<input id="defaultLoginFormEmail" class="form-control mb-4" name="username">-->
                 <td>{{ form.username }}</td>
             </tr>
             <tr>
                 <td><p>{{ form.password.label_tag }}</p></td>
-                <!--<input id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" name="password">-->
                 <td>{{ form.password }}</td>
             </tr>
-            </table>
+            </table>-->
 
-            <input class="button-template" type="submit" value="login" />
+            <p>Username:</p>
+            <input id="defaultLoginFormUser" class="form-control mb-4" placeholder="Username" name="username">
+            <p>Password:</p>
+            <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" name="password">
+            <input id="login-button" class="button-template" type="submit" value="login" />
             <input type="hidden" name="next" value="{{ next }}" />
         </form>
     </div>

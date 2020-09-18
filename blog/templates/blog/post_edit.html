@@ -1,9 +1,13 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+<div class="post-edit-container">
+    <a class="button-template" href="{% url 'post_draft_list' %}">Edit draft</a>
     <h2>New post</h2>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+        <a class="button-template" href="{% url 'post_draft_list' %}">Cancel</a>
+        <button type="submit" class="save button-template">Save changes</button>
     </form>
+</div>
 {% endblock %}
