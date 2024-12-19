@@ -1,0 +1,67 @@
+{% load static %}
+<html>
+    <head>
+        <title>Blog</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">FrogBlog</a></h1>
+            <div class="right-block">
+            {% if user.is_authenticated %}
+                <p class="top-menu">Hello {{ user.username }}</p>
+                <!--the urls below refer to the ones in urls.py files!-->
+                <div class="dropdown d-inline-block">
+                    <button class="top-menu button-template dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Actions
+                    </button>
+                    <div class="dropdown-menu" style="background-color: #FFA500;" aria-labelledby="dropdownMenuButton">
+                        <a class="button-template" href="{% url 'post_new' %}">Write a post</a><br>
+                        <a class="button-template" href="{% url 'post_draft_list' %}">Drafts</a><hr>
+                        <a class="button-template" href="{% url 'logout' %}">Log out</a>
+                    </div>
+                </div>
+                
+            {% else %}
+                <!--<p class="btn btn-default top-menu"><a href="{% url 'login' %}">Log In</a></p>-->
+                <a class="top-menu button-template" href="{% url 'login' %}">Log In</a>
+                <!--<a href="{% url 'login' %}" class="top-menu"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg></a>-->
+            {% endif %}
+            </div>
+        </div>
+        <!--<div class='what'>
+            <h1><a href="/">FrogBlog</a></h1>
+        </div>-->
+        <div class="content container-lg">
+            <div class="row">
+                <div class="col-md-12">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+
+
+        <!--Scripts included for styling-->
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+        <!-- Popper.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+    </body>
+</html>
